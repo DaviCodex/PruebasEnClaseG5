@@ -23,9 +23,35 @@ function punto5(){
       case 3: operacion= num1*num2;break;
       case 4: operacion= num1/num2;break;
       case 5: operacion= Math.pow(num1,num2);break;
-      case 6: operacion= Math.sqrt(num1, num2);break;
+      case 6: operacion= Math.sqrt(num1);break;
   }
   alert("El resultado de la operación es:" + operacion);
+}
+
+function punto6(){
+  let fechaActual = new Date();
+  let fecha = prompt("Ingrese su fecha de nacimiento (dd-mm-aaaa)");
+  let fechaSeparada = fecha.split("-");
+
+  let año = fechaActual.getFullYear() - fechaSeparada[2];
+  let mes = (fechaActual.getMonth()+1) - fechaSeparada[1];
+  let dia = fechaActual.getDate() - fechaSeparada[0];
+
+  alert(fechaActual);
+  alert(fechaActual.getDate() + " " + (fechaActual.getMonth()+1) + " " + fechaActual.getFullYear())
+  alert(dia + " " + mes + " " + año);
+
+  if(mes<0){
+    año--;
+    alert("menos");
+  }else if(dia<0 && mes<=0){
+    año--;
+    alert("menos");
+  }else{    
+    alert("none");
+  }
+
+  alert("Tiene " + año + " años")
 }
 
 function myFunction() {
